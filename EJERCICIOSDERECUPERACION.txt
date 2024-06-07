@@ -1,0 +1,27 @@
+package com.example.rsumativa4;
+
+public class Staircase {
+    public static void main(String[] args) {
+        drawStaircase(5);
+    }
+
+    public static void drawStaircase(int steps) {
+        if (steps > 0) {
+            for (int i = 0; i < steps; i++) {
+                for (int j = 0; j < steps - i - 1; j++) {
+                    System.out.print(" ");
+                }
+                System.out.print("_|\n");
+            }
+        } else if (steps < 0) {
+            for (int i = 0; i < Math.abs(steps); i++) {
+                for (int j = 0; j < i; j++) {
+                    System.out.print(" ");
+                }
+                System.out.print("_|\n");
+            }
+        } else {
+            System.out.println("__");
+        }
+    }
+}
